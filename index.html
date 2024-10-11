@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descubra seu nome DEV</title>
-    <link rel="stylesheet" href="css/index.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              spacing: {
+                '100': '100px',
+              }
+            }
+          }
+        }
+      </script> -->
+    <link rel="stylesheet" href="css/index.css">
 </head>
-
 <body>
     <main class="flex h-screen bg-black text-white">
         <div class="flex-1 flex justify-center items-center">
-            <img src="img/hackerman.png" alt="">
+            <img src="img/hackerman.png" alt="Hacker de capuz">
         </div>
-        <div class="flex-1 flex-col flex justify-center items-center gap-[100px]">
-            <h1 class="text-[48px] text-center">Descubra seu nome de <span
-                    class="block text-[90px] uppercase bg-gradient-to-b from-[#37C000] to-black bg-clip-text text-transparent">programador</span></h1>
-            <form class="flex ">
+        <div class="flex-1 flex flex-col justify-center items-center gap-[50px]">
+            <h1 class="text-[48px] text-center">Descubra seu nome de <span class="block text-[90px] uppercase bg-gradient-to-b from-[#37C000] to-black bg-clip-text text-transparent">programador</span></h1>
+            <form class="flex gap-4">
                 <div>
-                    <label for="dia">Digite seu dia</label>
-                    <input id="dia" type="number" class="w-[250px] h-[40px] text-black p-3">
+                    <label for="dia" class="block">Digite seu dia</label>
+                    <input id="dia" type="number" class="w-[250px] h-[40px] text-black">
                 </div>
                 <div>
-                    <label for="mes">Escolha seu mês</label>
-                    <select id="mes" class="w-[250px] h-[40px] text-black p-3">
+                    <label for="mes" class="block">Escolha seu mês</label>
+                    <select id="mes" class="w-[250px] h-[40px] text-black">
                         <option value="1">Janeiro</option>
                         <option value="2">Fevereiro</option>
                         <option value="3">Março</option>
@@ -40,11 +48,11 @@
                     </select>
                 </div>
             </form>
-            <h2 class="text-[24px] text-center">Seu nome é<span id="nome" class="block text-[40px]">...</span></h2>
+            <button id="btn" class="w-[200px] h-[45px] bg-[#37C000] hover:bg-[#299000] duration-300 text-black font-bold rounded">Descobrir</button>
+            <h2 class="text-[24px] text-center">Seu nome é <span id="nome" class="block text-[40px]">...</span></h2>
         </div>
     </main>
 
     <script src="js/index.js"></script>
 </body>
-
 </html>
