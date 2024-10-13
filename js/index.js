@@ -1,3 +1,24 @@
+let dia = prompt('Digite o dia');
+
+if (dia <= 0 || dia > 31) {
+    console.log('Digite um dia válido');
+}
+
+if (dia % 10 == 1 || dia % 10 == 2) {
+    console.log('Desenvolvedor(a)');
+}
+if (dia % 10 == 3 || dia % 10 == 4 || dia % 10 == 5) {
+    console.log('Programador(a)');
+}
+
+if (dia % 10 == 6 || dia % 10 == 7 || dia % 10 == 8) {
+    console.log('Estagiario(a)');
+}
+if (dia % 10 == 9 || dia % 10 == 0) {
+    console.log('Senior(a)');
+}
+
+
 btn.onclick = function(){
     switch(Number(mes.value)){
         case 1:
