@@ -1,23 +1,24 @@
 let dia = prompt('Digite o dia');
 
-if (dia <= 0 || dia > 31) {
+if (dia < 1 || dia > 31) {
     console.log('Digite um dia válido');
+} else {
+    const ultimoDigito = dia % 10;
+    if (ultimoDigito === 1 || ultimoDigito === 2) {
+        console.log('Desenvolvedor(a)');
+    } else if (ultimoDigito === 3 || ultimoDigito === 4 || ultimoDigito === 5) {
+        console.log('Programador(a)');
+    } else if (ultimoDigito === 6 || ultimoDigito === 7 || ultimoDigito === 8) {
+        console.log('Estagiário(a)');
+    } else {
+        console.log('Sênior(a)');
+    }
 }
-
-if (dia % 10 == 1 || dia % 10 == 2) {
-    console.log('Desenvolvedor(a)');
-}
-if (dia % 10 == 3 || dia % 10 == 4 || dia % 10 == 5) {
-    console.log('Programador(a)');
-}
-
-if (dia % 10 == 6 || dia % 10 == 7 || dia % 10 == 8) {
-    console.log('Estagiario(a)');
-}
-if (dia % 10 == 9 || dia % 10 == 0) {
-    console.log('Senior(a)');
-}
-
+// Se você digitar o dia 27:
+// O if verifica se 27 está entre 1 e 31. Como está, ele entra no else.
+// Dentro do else, é calculado 27 % 10, que resulta em 7.
+// Então, a constante ultimoDigito recebe o valor 7.
+// Em seguida, o código verifica se esse último dígito (7) corresponde a alguma das categorias definidas (estagiário, nesse caso).
 
 btn.onclick = function(){
     switch(Number(mes.value)){
